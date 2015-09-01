@@ -26,6 +26,12 @@
     "url": "https://github.com/magic/utils/issues"
   },
   "dependencies": {
+    "babelify": "^6.3.0",
     "page": "^1.6.3"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
   }
 }
