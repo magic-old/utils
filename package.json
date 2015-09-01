@@ -1,0 +1,31 @@
+{
+  "name": "utils",
+  "version": "0.0.1",
+  "description": "Magic Client Utility Libraries.",
+  "private": true,
+  "author": "Wizards@Work",
+  "license": "AGPL-3.0",
+  "main": "index.js",
+  "contributors": [
+    {
+      "name": "jascha ehrenreich",
+      "email": "jascha@magicshifter.net",
+      "github": "jaeh"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/magic/utils"
+  },
+  "keywords": [
+    "magicshifter",
+    "magic",
+    "utils"
+  ],
+  "bugs": {
+    "url": "https://github.com/magic/utils/issues"
+  },
+  "dependencies": {
+    "page": "^1.6.3"
+  }
+}
