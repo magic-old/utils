@@ -1,5 +1,5 @@
 export function hasClass(node, className) {
-  return node.className.indexOf(className) > -1;
+  return node && node.className && node.className.indexOf(className) > -1;
 }
 
 export function isType(type, node, key = false) {
