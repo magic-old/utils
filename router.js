@@ -1,3 +1,4 @@
+import {isNumber, hasClass} from './index';
 import page from 'page';
 
 page('*', show);
@@ -21,10 +22,6 @@ Object.keys(allLinks).forEach(key => {
   }
 });
 
-function isNumber(val) {
-  return typeof val === 'number' && (parseInt(val) === parseInt(val));
-}
-
 function show(ctx, next) {
   let selector = (ctx.pathname === '/')
                  ? '#♥'
@@ -37,7 +34,7 @@ function show(ctx, next) {
   }
 
   let {offsetTop} = target;
-  if (body && body.className.indexOf('scrolled') === -1) {
+  if (hasClass(body, 'scrolled')) {
     if (nav && nav.clientHeight) {
       offsetTop -= nav.clientHeight;
     }
