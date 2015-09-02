@@ -13,9 +13,10 @@ const allLinks = document.querySelectorAll('a');
 Object.keys(allLinks).forEach(key => {
   const link = allLinks[key];
   if (link && link.href) {
-    const hrefArray = link.href.split('#');
-    if (hrefArray.length) {
-      link.href = hrefArray.join('');
+    const linkArray = link.href.split('#');
+    if (linkArray.length > 1) {
+      const href = linkArray[linkArray.length - 1];
+      link.href = `/${href}`;
     }
   }
 });
