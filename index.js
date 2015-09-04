@@ -21,3 +21,7 @@ export function isNumber(val, key = false) {
 
   return isType('number', val, key) && parseInt(val[key]) === parseInt(val[key]);
 }
+
+export function isString(val, key = false) {
+  return isType('string', val, key);
+}
