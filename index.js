@@ -25,3 +25,11 @@ export function isNumber(val, key = false) {
 export function isString(val, key = false) {
   return isType('string', val, key);
 }
+
+export function contains(iterable, value) {
+  if (iterable.indexOf) {
+    return iterable.indexOf(value) > -1;
+  }
+
+  return Object.keys(iterable).filter(key => iterable[key] === value).length;
+}
