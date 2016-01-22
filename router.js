@@ -36,7 +36,8 @@ export default function route(routes = defaultRoutes) {
 }
 
 function show(ctx, next) {
-  let selector = (ctx.pathname === '/')
+  const {pathname} = ctx;
+  let selector = (pathname === '/' || pathname === '/ms3000' || pathname === '/ms3000/')
                  ? '#♥'
                  : ctx.pathname.replace('/', '#');
 
